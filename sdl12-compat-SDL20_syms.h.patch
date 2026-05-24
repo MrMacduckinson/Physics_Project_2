@@ -1,0 +1,12 @@
+diff --git a/library_sources/sdl12-compat/src/SDL20_syms.h b/library_sources/sdl12-compat/src/SDL20_syms.h
+index 5f1a2c9..bb545aa 100644
+--- a/library_sources/sdl12-compat/src/SDL20_syms.h
++++ b/library_sources/sdl12-compat/src/SDL20_syms.h
+@@ -332,6 +332,7 @@ SDL20_SYM(int,RenderSetLogicalSize,(SDL_Renderer *a, int b, int c),(a,b,c),retur
+ SDL20_SYM(int,SetRenderDrawColor,(SDL_Renderer *a, Uint8 b, Uint8 c, Uint8 d, Uint8 e),(a,b,c,d,e),return)
+ SDL20_SYM(int,RenderClear,(SDL_Renderer *a),(a),return)
+ SDL20_SYM(int,RenderCopy,(SDL_Renderer *a, SDL_Texture *b, const SDL_Rect *c, const SDL_Rect *d),(a,b,c,d),return)
++SDL20_SYM(int,RenderCopyEx,(SDL_Renderer *a, SDL_Texture *b, const SDL_Rect *c, const SDL_Rect *d, const double e, const SDL_Point *f, const SDL_RendererFlip g),(a,b,c,d,e,f,g),return)
+ SDL20_SYM(void,DestroyTexture,(SDL_Texture *a),(a),)
+ SDL20_SYM(void,DestroyRenderer,(SDL_Renderer *a),(a),)
+ SDL20_SYM(void,RenderPresent,(SDL_Renderer *a),(a),)

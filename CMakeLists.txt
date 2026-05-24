@@ -7,7 +7,7 @@ option(BUILD_FOR_11_0 "Build for macOS 11.0+ (very modern SDK) (arm64) (sdl12-co
 option(BUILD_FOR_10_7 "Build for macOS 10.7+ (10.15 SDK) (x86_64) (sdl12-compat)" ON)
 option(BUILD_FOR_10_4 "Build for macOS 10.4-10.14 (10.4u SDK) (i386) (SDL 1.2)" ON)
 option(BUILD_FOR_PPC "Build for Mac OS 8.1-10.4 (Retro68 Macintosh Toolbox) (PowerPC) (modified SDL 1.2)" ON)
-option(BUILD_FOR_M68K "Build for Mac OS 8.1-??? (Retro68 Macintosh Toolbox) (m68k) (modified SDL 1.2" ON)
+option(BUILD_FOR_M68K "Build for Mac OS 8.1-??? (Retro68 Macintosh Toolbox) (m68k) (modified SDL 1.2)" ON)
 
 # If this is a multi-build invocation, delegate to ExternalProject
 if(NOT DEFINED IS_SUBBUILD)
@@ -35,14 +35,14 @@ if(NOT IS_SUBBUILD)
 
     if(_build_count GREATER 1)
         # Multi-target build: create wrapper project that builds each target separately
-        project(Physics_Project_MultiTarget NONE)
+        project(Memebooru_MultiTarget NONE)
         include(ExternalProject)
 
         set(SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
         set(PARENT_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
         if(BUILD_FOR_11_0)
-            ExternalProject_Add(Physics_Project_11_0
+            ExternalProject_Add(Memebooru_11_0
                 SOURCE_DIR "${SOURCE_DIR}"
                 BINARY_DIR "${PARENT_BINARY_DIR}/arm64_11.0"
                 CMAKE_ARGS
@@ -59,7 +59,7 @@ if(NOT IS_SUBBUILD)
         endif()
 
         if(BUILD_FOR_10_7)
-            ExternalProject_Add(Physics_Project_10_7
+            ExternalProject_Add(Memebooru_10_7
                 SOURCE_DIR "${SOURCE_DIR}"
                 BINARY_DIR "${PARENT_BINARY_DIR}/x86_64_10.7"
                 CMAKE_ARGS
@@ -76,7 +76,7 @@ if(NOT IS_SUBBUILD)
         endif()
 
         if(BUILD_FOR_10_4)
-            ExternalProject_Add(Physics_Project_10_4
+            ExternalProject_Add(Memebooru_10_4
                 SOURCE_DIR "${SOURCE_DIR}"
                 BINARY_DIR "${PARENT_BINARY_DIR}/i386_10.4"
                 CMAKE_ARGS
@@ -93,7 +93,7 @@ if(NOT IS_SUBBUILD)
         endif()
 
         if(BUILD_FOR_M68K)
-            ExternalProject_Add(Physics_Project_M68K
+            ExternalProject_Add(Memebooru_M68K
                 SOURCE_DIR "${SOURCE_DIR}"
                 BINARY_DIR "${PARENT_BINARY_DIR}/m68k"
                 CMAKE_ARGS
@@ -110,7 +110,7 @@ if(NOT IS_SUBBUILD)
         endif()
 
         if(BUILD_FOR_PPC)
-            ExternalProject_Add(Physics_Project_PPC
+            ExternalProject_Add(Memebooru_PPC
                 SOURCE_DIR "${SOURCE_DIR}"
                 BINARY_DIR "${PARENT_BINARY_DIR}/ppc"
                 CMAKE_ARGS
@@ -140,7 +140,7 @@ endif()
 if(BUILD_FOR_M68K OR BUILD_FOR_PPC)
     # Retro68 builds don't use standard CMake project setup
     # We'll handle these separately after project() is called
-    project(Physics_Project NONE)
+    project(Memebooru NONE)
 
 elseif(BUILD_FOR_10_4)
     set(MACOSX_10_4_SDK "/Library/Developer/CommandLineTools/SDKs/MacOSX10.4u.sdk")
@@ -201,50 +201,27 @@ endif()
 # M68K and PPC Retro68 builds - these use Makefiles instead of CMake
 # ============================================================================
 if(BUILD_FOR_M68K OR BUILD_FOR_PPC)
-    if(BUILD_FOR_M68K)
-        set(RETRO_BUILD_DIR "${CMAKE_BINARY_DIR}/m68k")
-        set(MAKEFILE_NAME "Makefile.macm68k")
-        set(REQUIRED_FILES "main.c" "Retro68APPL.r" "${MAKEFILE_NAME}")
-    elseif(BUILD_FOR_PPC)
-        set(RETRO_BUILD_DIR "${CMAKE_BINARY_DIR}/ppc")
-        set(MAKEFILE_NAME "Makefile.mac")
-        set(REQUIRED_FILES "main.c" "SDL.r" "${MAKEFILE_NAME}")
-    endif()
-
-    # Create build directory
-    file(MAKE_DIRECTORY "${RETRO_BUILD_DIR}")
-
-    # Copy necessary files to build directory
-    foreach(file_to_copy ${REQUIRED_FILES})
-        configure_file(
-            "${CMAKE_CURRENT_SOURCE_DIR}/${file_to_copy}"
-            "${RETRO_BUILD_DIR}/${file_to_copy}"
-            COPYONLY
-        )
-    endforeach()
-
-    # Copy tetimg directory
-    file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/tetimg"
-         DESTINATION "${RETRO_BUILD_DIR}")
-
-    # Create a custom target that runs the Makefile
+    # Run make from the source directory so all source files are accessible.
+    # BUILD_DIR is passed as an absolute path so outputs land in the cmake binary dir.
     if(BUILD_FOR_M68K)
         add_custom_target(build_m68k ALL
-            COMMAND make -f ${MAKEFILE_NAME}
-            WORKING_DIRECTORY "${RETRO_BUILD_DIR}"
-            COMMENT "Building M68K target using ${MAKEFILE_NAME}"
+            COMMAND ${CMAKE_MAKE_PROGRAM}
+                -f "${CMAKE_CURRENT_SOURCE_DIR}/Makefile.macm68k"
+                "BUILD_DIR=${CMAKE_CURRENT_BINARY_DIR}"
+            WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+            COMMENT "Building M68K target → ${CMAKE_CURRENT_BINARY_DIR}"
             VERBATIM
         )
     elseif(BUILD_FOR_PPC)
         add_custom_target(build_ppc ALL
-            COMMAND make -f ${MAKEFILE_NAME}
-            WORKING_DIRECTORY "${RETRO_BUILD_DIR}"
-            COMMENT "Building PPC target using ${MAKEFILE_NAME}"
+            COMMAND ${CMAKE_MAKE_PROGRAM}
+                -f "${CMAKE_CURRENT_SOURCE_DIR}/Makefile.mac"
+                "BUILD_DIR=${CMAKE_CURRENT_BINARY_DIR}"
+            WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+            COMMENT "Building PPC target → ${CMAKE_CURRENT_BINARY_DIR}"
             VERBATIM
         )
     endif()
-
-    # Don't continue with normal build process
     return()
 endif()
 
@@ -252,7 +229,7 @@ endif()
 # Continue with normal CMake builds (10.4, 10.7, 11.0)
 # ============================================================================
 
-project(Physics_Project LANGUAGES C OBJC)
+project(Memebooru LANGUAGES C OBJC)
 
 if(NOT BUILD_FOR_10_7 AND NOT BUILD_FOR_10_4)
     set(CMAKE_CXX_STANDARD 20)
@@ -265,7 +242,7 @@ if(BUILD_FOR_10_4)
     # Put generated libs/includes inside the build tree to avoid changing source
     set(PROJECT_LIB_DIR "${CMAKE_BINARY_DIR}/lib_10_4")
     set(PROJECT_INCLUDE_SDL_DIR "${CMAKE_BINARY_DIR}/include_10_4/SDL")
-    set(EXECUTABLE_NAME "Physics_Project_10_4")
+    set(EXECUTABLE_NAME "Memebooru_10_4")
     set(INCLUDE_BASE_DIR "${CMAKE_BINARY_DIR}/include_10_4")
 
     # Build SDL 1.2 using ExternalProject
@@ -320,20 +297,20 @@ elseif(BUILD_FOR_10_7)
     # x86_64 10.7 target - place build outputs in the build tree
     set(PROJECT_LIB_DIR "${CMAKE_BINARY_DIR}/lib_10_7")
     set(PROJECT_INCLUDE_SDL_DIR "${CMAKE_BINARY_DIR}/include_10_7/SDL")
-    set(EXECUTABLE_NAME "Physics_Project_10_7")
+    set(EXECUTABLE_NAME "Memebooru_10_7")
     set(INCLUDE_BASE_DIR "${CMAKE_BINARY_DIR}/include_10_7")
 
 elseif(BUILD_FOR_11_0)
     # Modern macOS 11.0+ target - place build outputs in the build tree
     set(PROJECT_LIB_DIR "${CMAKE_BINARY_DIR}/lib_11_0")
     set(PROJECT_INCLUDE_SDL_DIR "${CMAKE_BINARY_DIR}/include_11_0/SDL")
-    set(EXECUTABLE_NAME "Physics_Project_11_0")
+    set(EXECUTABLE_NAME "Memebooru_11_0")
     set(INCLUDE_BASE_DIR "${CMAKE_BINARY_DIR}/include_11_0")
 else()
     # Fallback: place general build artifacts in build/
     set(PROJECT_LIB_DIR "${CMAKE_BINARY_DIR}/lib")
     set(PROJECT_INCLUDE_SDL_DIR "${CMAKE_BINARY_DIR}/include/SDL")
-    set(EXECUTABLE_NAME "Physics_Project")
+    set(EXECUTABLE_NAME "Memebooru")
     set(INCLUDE_BASE_DIR "${CMAKE_BINARY_DIR}/include")
 endif()
 
@@ -390,31 +367,30 @@ if(NOT BUILD_FOR_10_4)
     )
 endif()
 
-# --- Collect tetimg resources for bundle ---
-file(GLOB TETIMG_RESOURCES "${CMAKE_CURRENT_SOURCE_DIR}/tetimg/*.bmp")
-
 # --- Main executable ---
 if(BUILD_FOR_10_4)
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c eprintf_stub.c ${TETIMG_RESOURCES})
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c eprintf_stub.c)
     set_source_files_properties(main.c PROPERTIES LANGUAGE OBJC)
     target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_10_4)
+elseif(BUILD_FOR_10_7)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
+    target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_10_7)
+elseif(BUILD_FOR_11_0)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
+    target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_11_0)
 else()
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c ${TETIMG_RESOURCES})
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
 endif()
-
-# Place tetimg resources into the bundle's Resources/tetimg directory
-foreach(res_file ${TETIMG_RESOURCES})
-    set_source_files_properties(${res_file} PROPERTIES
-        MACOSX_PACKAGE_LOCATION "Resources/tetimg"
-    )
-endforeach()
 
 # Set bundle properties
 set_target_properties(${EXECUTABLE_NAME} PROPERTIES
-    MACOSX_BUNDLE_BUNDLE_NAME "ModestBricks"
-    MACOSX_BUNDLE_GUI_IDENTIFIER "com.mrmacduckinson.modestbricks"
-    MACOSX_BUNDLE_BUNDLE_VERSION "1.0"
-    MACOSX_BUNDLE_SHORT_VERSION_STRING "1.0"
+    MACOSX_BUNDLE_BUNDLE_NAME "Memebooru"
+    MACOSX_BUNDLE_GUI_IDENTIFIER "com.mrmacduckinson.memebooru"
+    MACOSX_BUNDLE_BUNDLE_VERSION "0.1"
+    MACOSX_BUNDLE_SHORT_VERSION_STRING "0.1"
 )
 
 target_include_directories(${EXECUTABLE_NAME} PRIVATE ${INCLUDE_BASE_DIR})
@@ -452,6 +428,52 @@ if(BUILD_FOR_10_4)
 else()
     add_dependencies(${EXECUTABLE_NAME} copy_sdl_libs_and_headers)
 
+    # SDL_ttf (SDL-1.2 branch) compiled directly into the executable.
+    # FreeType is built from the copy bundled inside SDL_ttf's external/ directory
+    # so it always matches the target architecture (arm64 or x86_64).
+    set(SDL_TTF_DIR "${CMAKE_CURRENT_SOURCE_DIR}/library_sources/SDL_ttf_12")
+    if(EXISTS "${SDL_TTF_DIR}/SDL_ttf.c")
+        include(ExternalProject)
+        set(_ft_src    "${SDL_TTF_DIR}/external/freetype-2.4.11")
+        set(_ft_prefix "${CMAKE_BINARY_DIR}/freetype-install")
+        set(_ft_cflags "-arch ${CMAKE_OSX_ARCHITECTURES} -mmacosx-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}")
+        if(CMAKE_OSX_SYSROOT)
+            set(_ft_cflags "${_ft_cflags} -isysroot ${CMAKE_OSX_SYSROOT}")
+        endif()
+        ExternalProject_Add(FreeType_bundled
+            SOURCE_DIR "${_ft_src}"
+            INSTALL_DIR "${_ft_prefix}"
+            CONFIGURE_COMMAND "${_ft_src}/configure"
+                --prefix=<INSTALL_DIR>
+                --disable-shared
+                --enable-static
+                --with-zlib=no
+                --without-bzip2
+                "CC=${CMAKE_C_COMPILER}"
+                "CFLAGS=${_ft_cflags}"
+                "LDFLAGS=${_ft_cflags}"
+            BUILD_COMMAND make -j4
+            INSTALL_COMMAND make install
+            BUILD_ALWAYS OFF
+        )
+        set(_ft_inc  "${_ft_prefix}/include")
+        set(_ft_inc2 "${_ft_prefix}/include/freetype2")
+        set(_ft_lib  "${_ft_prefix}/lib/libfreetype.a")
+        file(MAKE_DIRECTORY "${_ft_inc}")
+        file(MAKE_DIRECTORY "${_ft_inc2}")
+        target_sources(${EXECUTABLE_NAME} PRIVATE "${SDL_TTF_DIR}/SDL_ttf.c")
+        # SDL_ttf.h uses #include "SDL.h" (no SDL/ prefix), so expose the SDL header dir directly
+        target_include_directories(${EXECUTABLE_NAME} PRIVATE
+            "${SDL_TTF_DIR}" "${PROJECT_INCLUDE_SDL_DIR}"
+            "${_ft_inc}" "${_ft_inc2}")
+        target_link_libraries(${EXECUTABLE_NAME} PRIVATE "${_ft_lib}")
+        target_compile_definitions(${EXECUTABLE_NAME} PRIVATE USE_SDL_TTF)
+        add_dependencies(${EXECUTABLE_NAME} FreeType_bundled)
+        message(STATUS "SDL_ttf enabled with bundled FreeType 2.4.11")
+    else()
+        message(STATUS "SDL_ttf source not found at ${SDL_TTF_DIR}, font rendering will use CoreText")
+    endif()
+
     set(SDL12COMPAT_LIB "${PROJECT_LIB_DIR}/libSDL-1.2.0.dylib")
     add_library(SDL12_compat_imported SHARED IMPORTED GLOBAL)
     set_target_properties(SDL12_compat_imported PROPERTIES
@@ -472,7 +494,7 @@ else()
         )
     endif()
 
-    target_link_libraries(${EXECUTABLE_NAME} PRIVATE SDL12_compat_imported)
+    target_link_libraries(${EXECUTABLE_NAME} PRIVATE SDL12_compat_imported "-framework ApplicationServices" "-framework Cocoa")
 
     # Make the .app self-contained: copy SDL dylibs into Contents/Frameworks of the bundle
     if(APPLE)

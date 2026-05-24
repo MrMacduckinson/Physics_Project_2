@@ -5,28 +5,36 @@ CXX=$(RETRO68)/bin/powerpc-apple-macos-g++
 REZ=$(RETRO68)/bin/Rez
 MAKEPEF = $(RETRO68)/bin/MakePEF
 
+BUILD_DIR ?= build/ppc
 
 CFLAGS = -D__MACOS__ -DSDLMIX_SOUND -DSCALING -Ofast -fdata-sections -ffunction-sections
 CXXFLAGS = $(CFLAGS)
 
-LDFLAGS=-L$(PREFIX)/lib -lRetroConsole -lm -lSDL -lDialogsLib -Wl,--as-needed -Wl,--gc-sections
+LDFLAGS=-L$(PREFIX)/lib -lRetroConsole -lm -lSDL -lDialogsLib -lQuickTimeLib -Wl,--as-needed -Wl,--gc-sections
 RINCLUDES=$(PREFIX)/RIncludes
 REZFLAGS=-I$(RINCLUDES)
 
-SRC = main.c
-
 CFLAGS += $(DEFS)
 
-OBJS = $(SRC:.c=.o)
+all: $(BUILD_DIR)/MemebooruPPC.bin $(BUILD_DIR)/MemebooruPPC.APPL $(BUILD_DIR)/MemebooruPPC.dsk
 
-PhysicsProjectPPC.bin PhysicsProjectPPC.APPL PhysicsProjectPPC.dsk: PhysicsProjectPPC.xcoff
-	$(MAKEPEF) PhysicsProjectPPC.xcoff -o PhysicsProjectPPC.pef
-	$(REZ) $(REZFLAGS) ./SDL.r -I$(RINCLUDES) -DCFRAG_NAME="\"PhysicsProjectPPC\"" -o PhysicsProjectPPC.bin --cc PhysicsProjectPPC.dsk --cc PhysicsProjectPPC.APPL --cc %PhysicsProjectPPC.ad -t APPL -c ???? --data PhysicsProjectPPC.pef
+$(BUILD_DIR)/MemebooruPPC.bin $(BUILD_DIR)/MemebooruPPC.APPL $(BUILD_DIR)/MemebooruPPC.dsk: $(BUILD_DIR)/MemebooruPPC.xcoff
+	$(MAKEPEF) "$(BUILD_DIR)/MemebooruPPC.xcoff" -o "$(BUILD_DIR)/MemebooruPPC.pef"
+	$(REZ) $(REZFLAGS) ./SDL.r -I$(RINCLUDES) -DCFRAG_NAME="\"MemebooruPPC\"" \
+		-o "$(BUILD_DIR)/MemebooruPPC.bin" \
+		--cc "$(BUILD_DIR)/MemebooruPPC.dsk" \
+		--cc "$(BUILD_DIR)/MemebooruPPC.APPL" \
+		--cc "$(BUILD_DIR)/%MemebooruPPC.ad" \
+		-t APPL -c ???? \
+		--data "$(BUILD_DIR)/MemebooruPPC.pef"
 
+$(BUILD_DIR)/MemebooruPPC.xcoff: $(BUILD_DIR)/main.o
+	$(CXX) $(CXXFLAGS) $(BUILD_DIR)/main.o -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
 
-PhysicsProjectPPC.xcoff: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
+$(BUILD_DIR)/main.o: main.c stb_image.h stb_easy_font.h mac_file_dialog.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ main.c
 
-.PHONY: clean
+.PHONY: clean all
 clean:
-	rm -f PhysicsProjectPPC.bin PhysicsProjectPPC.APPL PhysicsProjectPPC.dsk PhysicsProjectPPC.xcoff PhysicsProjectPPC.xcoff.gdb *.o
+	rm -rf "$(BUILD_DIR)"

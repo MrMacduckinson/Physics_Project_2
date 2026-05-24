@@ -4,6 +4,8 @@ CC=$(RETRO68)/bin/m68k-apple-macos-gcc
 CXX=$(RETRO68)/bin/m68k-apple-macos-g++
 REZ=$(RETRO68)/bin/Rez
 
+BUILD_DIR ?= build/m68k
+
 CFLAGS = -D__MACOS__ -DFORCE2X -Os -fdata-sections -ffunction-sections
 CXXFLAGS = $(CFLAGS)
 
@@ -11,21 +13,24 @@ LDFLAGS=-lRetroConsole -lSDL -Wl,--as-needed -Wl,--gc-sections
 RINCLUDES=$(PREFIX)/RIncludes
 REZFLAGS=-I$(RINCLUDES)
 
-SRC = main.c
 CFLAGS += $(DEFS)
 
-OBJS = $(SRC:.c=.o)
+all: $(BUILD_DIR)/MemebooruM68K.bin $(BUILD_DIR)/MemebooruM68K.APPL $(BUILD_DIR)/MemebooruM68K.dsk
 
-PhysicsProjectM68K.bin PhysicsProjectM68K.APPL PhysicsProjectM68K.dsk: PhysicsProjectM68K.code.bin
+$(BUILD_DIR)/MemebooruM68K.bin $(BUILD_DIR)/MemebooruM68K.APPL $(BUILD_DIR)/MemebooruM68K.dsk: $(BUILD_DIR)/MemebooruM68K.code.bin
 	$(REZ) $(REZFLAGS) \
-		--copy "PhysicsProjectM68K.code.bin" \
+		--copy "$(BUILD_DIR)/MemebooruM68K.code.bin" \
 		"./Retro68APPL.r" \
 		-t "APPL" -c "????" \
-		-o PhysicsProjectM68K.bin --cc PhysicsProjectM68K.APPL --cc PhysicsProjectM68K.dsk
+		-o "$(BUILD_DIR)/MemebooruM68K.bin" --cc "$(BUILD_DIR)/MemebooruM68K.APPL" --cc "$(BUILD_DIR)/MemebooruM68K.dsk"
 
-PhysicsProjectM68K.code.bin: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
+$(BUILD_DIR)/MemebooruM68K.code.bin: $(BUILD_DIR)/main.o
+	$(CXX) $(CXXFLAGS) $(BUILD_DIR)/main.o -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
 
-.PHONY: clean
+$(BUILD_DIR)/main.o: main.c stb_image.h stb_easy_font.h mac_file_dialog.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ main.c
+
+.PHONY: clean all
 clean:
-	rm -f PhysicsProjectM68K.bin PhysicsProjectM68K.APPL PhysicsProjectM68K.dsk PhysicsProjectM68K.code.bin PhysicsProjectM68K.code.bin.gdb *.o
+	rm -rf "$(BUILD_DIR)"

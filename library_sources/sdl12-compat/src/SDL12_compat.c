@@ -7256,6 +7256,7 @@ PresentScreen(void)
     }
 
     SDL20_RenderClear(renderer);
+
     SDL20_RenderCopy(renderer, VideoTexture20, NULL, NULL);
 
     /* Render any pending YUV overlay over the surface texture. */

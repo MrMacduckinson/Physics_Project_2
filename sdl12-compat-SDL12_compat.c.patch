@@ -1,0 +1,31 @@
+diff --git a/library_sources/sdl12-compat/src/SDL12_compat.c b/library_sources/sdl12-compat/src/SDL12_compat.c
+index fab38d4..7805154 100644
+--- a/library_sources/sdl12-compat/src/SDL12_compat.c
++++ b/library_sources/sdl12-compat/src/SDL12_compat.c
+@@ -7256,7 +7256,26 @@ PresentScreen(void)
+     }
+ 
+     SDL20_RenderClear(renderer);
++
++    /* On macOS with the Metal renderer, SDL2's coordinate system causes the
++     * surface texture to appear vertically flipped. Detect this and flip it
++     * back so that the SDL 1.2 surface contents are displayed correctly. */
++#ifdef __APPLE__
++    {
++        SDL_RendererInfo rinfo;
++        SDL_bool use_flip = SDL_FALSE;
++        if (SDL20_GetRendererInfo(renderer, &rinfo) == 0) {
++            use_flip = (SDL20_strncmp(rinfo.name, "metal", 5) == 0) ? SDL_TRUE : SDL_FALSE;
++        }
++        if (use_flip) {
++            SDL20_RenderCopyEx(renderer, VideoTexture20, NULL, NULL, 0.0, NULL, SDL_FLIP_VERTICAL);
++        } else {
++            SDL20_RenderCopy(renderer, VideoTexture20, NULL, NULL);
++        }
++    }
++#else
+     SDL20_RenderCopy(renderer, VideoTexture20, NULL, NULL);
++#endif
+ 
+     /* Render any pending YUV overlay over the surface texture. */
+     overlay = QueuedDisplayOverlays.next;
