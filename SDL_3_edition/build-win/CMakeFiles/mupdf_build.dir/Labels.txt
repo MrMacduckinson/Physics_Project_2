@@ -1,0 +1,13 @@
+# Target labels
+ mupdf_build
+# Source files and their labels
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/CMakeFiles/mupdf_build
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/CMakeFiles/mupdf_build.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/CMakeFiles/mupdf_build-complete.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-build.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-configure.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-download.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-install.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-mkdir.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-patch.rule
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build-win/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-update.rule

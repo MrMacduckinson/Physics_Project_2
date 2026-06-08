@@ -1,0 +1,13 @@
+# Target labels
+ Memebooru_10_4
+# Source files and their labels
+/src/build-linux-arm64/CMakeFiles/Memebooru_10_4
+/src/build-linux-arm64/CMakeFiles/Memebooru_10_4.rule
+/src/build-linux-arm64/CMakeFiles/Memebooru_10_4-complete.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-build.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-configure.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-download.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-install.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-mkdir.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-patch.rule
+/src/build-linux-arm64/Memebooru_10_4-prefix/src/Memebooru_10_4-stamp/Memebooru_10_4-update.rule

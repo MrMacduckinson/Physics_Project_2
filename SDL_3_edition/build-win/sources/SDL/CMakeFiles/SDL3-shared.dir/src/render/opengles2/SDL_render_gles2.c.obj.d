@@ -1,0 +1,25 @@
+sources/SDL/CMakeFiles/SDL3-shared.dir/src/render/opengles2/SDL_render_gles2.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/SDL_render_gles2.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../../video/SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_vulkan.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_stdinc.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_error.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_video.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_close_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../../video/SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../../video/SDL_blit.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_opengles2.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_platform_defines.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/khronos/GLES2/gl2platform.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/KHR/khrplatform.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/khronos/GLES2/gl2.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/khronos/GLES2/gl2ext.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../SDL_sysrender.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../../video/SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../SDL_yuv_sw_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/../../video/SDL_pixels_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/SDL_shaders_gles2.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/opengles2/SDL_gles2funcs.h

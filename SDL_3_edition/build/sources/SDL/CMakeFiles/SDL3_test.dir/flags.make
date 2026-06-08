@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/build/sources/SDL/include-revision -I/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include
 
-C_FLAGSarm64 = -O3 -DNDEBUG -std=gnu11 -arch arm64 -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
+C_FLAGSarm64 = -O3 -DNDEBUG -std=gnu11 -arch arm64 -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
 
-C_FLAGS = -O3 -DNDEBUG -std=gnu11 -arch arm64 -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
+C_FLAGS = -O3 -DNDEBUG -std=gnu11 -arch arm64 -fPIC -Wall -Wundef -Wfloat-conversion -fno-strict-aliasing -Wdocumentation -Wdocumentation-unknown-command -fcomment-block-commands=threadsafety -Wshadow -Wno-unused-local-typedefs -Wimplicit-fallthrough -fcolor-diagnostics
 

@@ -6,6 +6,7 @@ REZ=$(RETRO68)/bin/Rez
 MAKEPEF = $(RETRO68)/bin/MakePEF
 
 BUILD_DIR ?= build/ppc
+OBJS = $(BUILD_DIR)/main.o $(BUILD_DIR)/store.o $(BUILD_DIR)/views.o $(BUILD_DIR)/textedit.o
 
 CFLAGS = -D__MACOS__ -DSDLMIX_SOUND -DSCALING -Ofast -fdata-sections -ffunction-sections
 CXXFLAGS = $(CFLAGS)
@@ -28,12 +29,24 @@ $(BUILD_DIR)/MemebooruPPC.bin $(BUILD_DIR)/MemebooruPPC.APPL $(BUILD_DIR)/Memebo
 		-t APPL -c ???? \
 		--data "$(BUILD_DIR)/MemebooruPPC.pef"
 
-$(BUILD_DIR)/MemebooruPPC.xcoff: $(BUILD_DIR)/main.o
-	$(CXX) $(CXXFLAGS) $(BUILD_DIR)/main.o -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
+$(BUILD_DIR)/MemebooruPPC.xcoff: $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
 
-$(BUILD_DIR)/main.o: main.c stb_image.h stb_easy_font.h mac_file_dialog.h
+$(BUILD_DIR)/main.o: main.c app.h store.h views.h textedit.h stb_image.h stb_easy_font.h mac_file_dialog.h
 	@mkdir -p "$(BUILD_DIR)"
 	$(CC) $(CFLAGS) -c -o $@ main.c
+
+$(BUILD_DIR)/store.o: store.c app.h store.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ store.c
+
+$(BUILD_DIR)/views.o: views.c app.h views.h store.h textedit.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ views.c
+
+$(BUILD_DIR)/textedit.o: textedit.c app.h textedit.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ textedit.c
 
 .PHONY: clean all
 clean:

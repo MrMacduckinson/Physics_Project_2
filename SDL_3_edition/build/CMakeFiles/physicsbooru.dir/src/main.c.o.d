@@ -145,6 +145,7 @@ CMakeFiles/physicsbooru.dir/src/main.c.o: \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_tray.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_version.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_oldnames.h \
+  /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_main.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/include/SDL3_ttf/SDL_ttf.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \

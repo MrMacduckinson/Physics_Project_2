@@ -1,0 +1,2 @@
+/opt/homebrew/bin/x86_64-w64-mingw32-ar qc libplutosvg.a CMakeFiles/plutosvg.dir/source/plutosvg.c.obj
+/opt/homebrew/bin/x86_64-w64-mingw32-ranlib libplutosvg.a

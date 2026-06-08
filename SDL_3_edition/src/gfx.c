@@ -15,10 +15,10 @@ static SDL_Renderer* R = NULL;
 static char g_font_path[1024];
 static float g_dpi = 1.0f;
 
-void gfx_set_dpi(float scale) { g_dpi = (scale > 0.5f ? scale : 1.0f); }
+#define FONT_SLOTS 12
+#define TXT_CAP 2048
 
 /* ---- font-by-size cache ------------------------------------------------ */
-#define FONT_SLOTS 12
 typedef struct { int size; TTF_Font* font; } FontSlot;
 static FontSlot g_fonts[FONT_SLOTS];
 
@@ -41,9 +41,32 @@ static TTF_Font* font_for(int size)
 }
 
 /* ---- rendered-text texture cache (direct mapped) ----------------------- */
-#define TXT_CAP 2048
 typedef struct { char* key; SDL_Texture* tex; int w, h; } TxtSlot;
 static TxtSlot g_txt[TXT_CAP];
+
+void gfx_set_dpi(float scale)
+{
+    float next = (scale > 0.5f ? scale : 1.0f);
+    if (fabsf(next - g_dpi) < 0.01f) return;
+    g_dpi = next;
+
+    int i;
+    for (i = 0; i < TXT_CAP; i++) {
+        if (g_txt[i].key) {
+            SDL_free(g_txt[i].key);
+            SDL_DestroyTexture(g_txt[i].tex);
+            g_txt[i].key = NULL;
+            g_txt[i].tex = NULL;
+        }
+    }
+    for (i = 0; i < FONT_SLOTS; i++) {
+        if (g_fonts[i].font) {
+            TTF_CloseFont(g_fonts[i].font);
+            g_fonts[i].font = NULL;
+            g_fonts[i].size = 0;
+        }
+    }
+}
 
 static unsigned long fnv(const char* s)
 {
@@ -157,10 +180,9 @@ void gfx_stroke_round(float x, float y, float w, float h, float r, float t, Colo
 
 void gfx_card(float x, float y, float w, float h, Color fill, Color border, bool shadow)
 {
-    float rad = 8.0f;
-    if (shadow) gfx_fill_round(x + 1, y + 3, w, h, rad, COL_SHADOW);
-    gfx_fill_round(x, y, w, h, rad, border);
-    gfx_fill_round(x + 1.5f, y + 1.5f, w - 3.0f, h - 3.0f, rad - 1.5f, fill);
+    if (shadow) gfx_fill_rect(x + 1, y + 3, w, h, COL_SHADOW);
+    gfx_fill_rect(x, y, w, h, border);
+    gfx_fill_rect(x + 1.5f, y + 1.5f, w - 3.0f, h - 3.0f, fill);
 }
 
 void gfx_push_clip(int x, int y, int w, int h)

@@ -11,6 +11,7 @@ int  ext_equals(const char* ext, const char* needle);/* case-insensitive */
 
 int  is_image_path(const char* path);   /* png/jpg/jpeg */
 int  is_text_path(const char* path);    /* txt/csv/md/tex/bib */
+int  is_tex_path(const char* path);     /* tex only */
 int  is_pdf_path(const char* path);
 int  is_supported_path(const char* path);
 

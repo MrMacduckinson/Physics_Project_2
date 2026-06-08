@@ -517,6 +517,7 @@ CMakeFiles/physicsbooru.dir/src/main.c.o: /Users/mrmacduckinson/dev/Memebooru/SD
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_loadso.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_locale.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_log.h \
+  /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_main.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_messagebox.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_metal.h \
   /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_misc.h \
@@ -767,6 +768,7 @@ CMakeFiles/physicsbooru.dir/src/store.c.o: /Users/mrmacduckinson/dev/Memebooru/S
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dirent.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/inttypes.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
@@ -803,6 +805,7 @@ CMakeFiles/physicsbooru.dir/src/store.c.o: /Users/mrmacduckinson/dev/Memebooru/S
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
@@ -835,6 +838,7 @@ CMakeFiles/physicsbooru.dir/src/store.c.o: /Users/mrmacduckinson/dev/Memebooru/S
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/dirent.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
@@ -1483,6 +1487,8 @@ CMakeFiles/physicsbooru.dir/src/views.c.o: /Users/mrmacduckinson/dev/Memebooru/S
 
 /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/src/textedit.c:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/dirent.h:
+
 /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/mupdf/include/mupdf/memento.h:
 
 /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/mupdf/include/mupdf/fitz/xml.h:
@@ -1791,6 +1797,8 @@ CMakeFiles/physicsbooru.dir/src/views.c.o: /Users/mrmacduckinson/dev/Memebooru/S
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h:
 
+/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_main.h:
+
 /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h:
@@ -1824,6 +1832,8 @@ CMakeFiles/physicsbooru.dir/src/views.c.o: /Users/mrmacduckinson/dev/Memebooru/S
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dirent.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
 
@@ -1982,6 +1992,8 @@ CMakeFiles/physicsbooru.dir/src/views.c.o: /Users/mrmacduckinson/dev/Memebooru/S
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
 

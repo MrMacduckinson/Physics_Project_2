@@ -1,0 +1,3 @@
+/opt/homebrew/bin/cmake -E rm -f CMakeFiles/physicsbooru.dir/objects.a
+/opt/homebrew/bin/x86_64-w64-mingw32-ar qc CMakeFiles/physicsbooru.dir/objects.a @CMakeFiles/physicsbooru.dir/objects1.rsp
+/opt/homebrew/bin/x86_64-w64-mingw32-gcc -msse4.1 -O3 -DNDEBUG -mwindows -Wl,--whole-archive CMakeFiles/physicsbooru.dir/objects.a -Wl,--no-whole-archive -o physicsbooru.exe -Wl,--out-implib,libphysicsbooru.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/physicsbooru.dir/linkLibs.rsp

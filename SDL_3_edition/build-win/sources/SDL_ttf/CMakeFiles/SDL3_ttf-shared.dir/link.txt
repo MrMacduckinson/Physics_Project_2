@@ -1,0 +1,3 @@
+/opt/homebrew/bin/cmake -E rm -f CMakeFiles/SDL3_ttf-shared.dir/objects.a
+/opt/homebrew/bin/x86_64-w64-mingw32-ar qc CMakeFiles/SDL3_ttf-shared.dir/objects.a @CMakeFiles/SDL3_ttf-shared.dir/objects1.rsp
+/opt/homebrew/bin/x86_64-w64-mingw32-g++ -msse4.1 -O3 -DNDEBUG -shared -static-libgcc -Wl,--no-undefined -Wl,--version-script=/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/src/SDL_ttf.sym -o SDL3_ttf.dll -Wl,--out-implib,libSDL3_ttf.dll.a -Wl,--major-image-version,0,--minor-image-version,3 -Wl,--whole-archive CMakeFiles/SDL3_ttf-shared.dir/objects.a -Wl,--no-whole-archive @CMakeFiles/SDL3_ttf-shared.dir/linkLibs.rsp

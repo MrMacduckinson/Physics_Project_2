@@ -1,0 +1,26 @@
+sources/SDL/CMakeFiles/SDL3-shared.dir/src/video/SDL_clipboard.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/SDL_clipboard.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/SDL_clipboard_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_vulkan.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_stdinc.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_error.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_video.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_close_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/SDL_blit.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_events_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/../video/SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_clipboardevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_displayevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_dropevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_keyboard_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_keymap_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_mouse_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_touch_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_pen_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/../SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_windowevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/../events/SDL_clipboardevents_c.h

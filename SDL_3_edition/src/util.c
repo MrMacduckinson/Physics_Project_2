@@ -32,6 +32,7 @@ int is_text_path(const char* path)
     return ext_equals(e, ".txt") || ext_equals(e, ".csv") || ext_equals(e, ".md") ||
            ext_equals(e, ".tex") || ext_equals(e, ".bib");
 }
+int is_tex_path(const char* path) { return ext_equals(path_ext(path), ".tex"); }
 int is_pdf_path(const char* path) { return ext_equals(path_ext(path), ".pdf"); }
 
 int is_supported_path(const char* path)
@@ -53,14 +54,14 @@ void get_badge_colors(const char* path, Color* bg, Color* fg)
 {
     const char* e = path_ext(path);
     Color b, f;
-    if      (ext_equals(e, ".pdf")) { b = (Color){150,35,25,255};  f = (Color){255,215,205,255}; }
-    else if (ext_equals(e, ".csv")) { b = (Color){25,95,45,255};   f = (Color){195,245,210,255}; }
-    else if (ext_equals(e, ".txt")) { b = (Color){50,70,115,255};  f = (Color){205,215,245,255}; }
-    else if (ext_equals(e, ".md"))  { b = (Color){45,45,75,255};   f = (Color){195,195,240,255}; }
+    if      (ext_equals(e, ".pdf")) { b = (Color){249,38,114,255};  f = (Color){248,248,242,255}; }
+    else if (ext_equals(e, ".csv")) { b = (Color){166,226,46,255};  f = (Color){39,40,34,255}; }
+    else if (ext_equals(e, ".txt")) { b = (Color){102,217,239,255}; f = (Color){39,40,34,255}; }
+    else if (ext_equals(e, ".md"))  { b = (Color){174,129,255,255}; f = (Color){248,248,242,255}; }
     else if (ext_equals(e, ".tex") || ext_equals(e, ".bib"))
-                                    { b = (Color){90,60,20,255};   f = (Color){255,225,170,255}; }
-    else if (ext_equals(e, ".mp4")) { b = (Color){40,40,55,255};   f = (Color){180,180,210,255}; }
-    else                            { b = (Color){50,48,44,255};   f = (Color){190,185,175,255}; }
+                                    { b = (Color){253,151,31,255};  f = (Color){39,40,34,255}; }
+    else if (ext_equals(e, ".mp4")) { b = (Color){102,217,239,255}; f = (Color){248,248,242,255}; }
+    else                            { b = (Color){117,113,94,255};  f = (Color){248,248,242,255}; }
     *bg = b; *fg = f;
 }
 

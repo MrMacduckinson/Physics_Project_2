@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_M68K"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_M68K.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_M68K-complete.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-build.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-configure.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-download.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-install.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-mkdir.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-patch.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Memebooru_M68K"
+		],
+		"name" : "Memebooru_M68K"
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_10_7"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_10_7.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_10_7-complete.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-build.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-configure.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-download.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-install.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-mkdir.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-patch.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_10_7-prefix/src/Memebooru_10_7-stamp/Memebooru_10_7-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Memebooru_10_7"
+		],
+		"name" : "Memebooru_10_7"
+	}
+}

@@ -193,4 +193,7 @@ CMakeFiles/physicsbooru.dir/src/store.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dirent.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/dirent.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h

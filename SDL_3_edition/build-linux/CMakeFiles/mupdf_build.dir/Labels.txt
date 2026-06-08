@@ -1,0 +1,13 @@
+# Target labels
+ mupdf_build
+# Source files and their labels
+/src/build-linux/CMakeFiles/mupdf_build
+/src/build-linux/CMakeFiles/mupdf_build.rule
+/src/build-linux/CMakeFiles/mupdf_build-complete.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-build.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-configure.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-download.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-install.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-mkdir.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-patch.rule
+/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-update.rule

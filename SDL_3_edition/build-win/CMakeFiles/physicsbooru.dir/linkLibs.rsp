@@ -1,0 +1,1 @@
+ sources/SDL_ttf/libSDL3_ttf.dll.a "mupdf-out/libmupdf.a" "mupdf-out/libmupdf-third.a" -lwinmm -lole32 -loleaut32 -limm32 -lsetupapi -lversion -lgdi32 -lws2_32 sources/SDL/libSDL3.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

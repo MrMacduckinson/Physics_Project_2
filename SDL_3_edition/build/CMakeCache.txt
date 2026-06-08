@@ -423,6 +423,9 @@ LibUSB_LINK_LIBRARIES:STRING=
 //Path to a library.
 MATH_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libm.tbd
 
+//Build a fully-static musl binary (Linux only)
+PHYSICSBOORU_STATIC:BOOL=OFF
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 

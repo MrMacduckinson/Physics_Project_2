@@ -1,0 +1,7 @@
+/src/build-linux-arm64/CMakeFiles/Memebooru_11_0.dir
+/src/build-linux-arm64/CMakeFiles/Memebooru_10_7.dir
+/src/build-linux-arm64/CMakeFiles/Memebooru_10_4.dir
+/src/build-linux-arm64/CMakeFiles/Memebooru_M68K.dir
+/src/build-linux-arm64/CMakeFiles/Memebooru_PPC.dir
+/src/build-linux-arm64/CMakeFiles/edit_cache.dir
+/src/build-linux-arm64/CMakeFiles/rebuild_cache.dir

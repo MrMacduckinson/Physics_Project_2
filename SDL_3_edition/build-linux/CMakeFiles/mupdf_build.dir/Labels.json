@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/src/build-linux/CMakeFiles/mupdf_build"
+		},
+		{
+			"file" : "/src/build-linux/CMakeFiles/mupdf_build.rule"
+		},
+		{
+			"file" : "/src/build-linux/CMakeFiles/mupdf_build-complete.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-build.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-configure.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-download.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-install.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-mkdir.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-patch.rule"
+		},
+		{
+			"file" : "/src/build-linux/mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"mupdf_build"
+		],
+		"name" : "mupdf_build"
+	}
+}

@@ -5,6 +5,7 @@ CXX=$(RETRO68)/bin/m68k-apple-macos-g++
 REZ=$(RETRO68)/bin/Rez
 
 BUILD_DIR ?= build/m68k
+OBJS = $(BUILD_DIR)/main.o $(BUILD_DIR)/store.o $(BUILD_DIR)/views.o $(BUILD_DIR)/textedit.o
 
 CFLAGS = -D__MACOS__ -DFORCE2X -Os -fdata-sections -ffunction-sections
 CXXFLAGS = $(CFLAGS)
@@ -24,12 +25,24 @@ $(BUILD_DIR)/MemebooruM68K.bin $(BUILD_DIR)/MemebooruM68K.APPL $(BUILD_DIR)/Meme
 		-t "APPL" -c "????" \
 		-o "$(BUILD_DIR)/MemebooruM68K.bin" --cc "$(BUILD_DIR)/MemebooruM68K.APPL" --cc "$(BUILD_DIR)/MemebooruM68K.dsk"
 
-$(BUILD_DIR)/MemebooruM68K.code.bin: $(BUILD_DIR)/main.o
-	$(CXX) $(CXXFLAGS) $(BUILD_DIR)/main.o -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
+$(BUILD_DIR)/MemebooruM68K.code.bin: $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LDFLAGS)	# C++ used for linking because RetroConsole needs it
 
-$(BUILD_DIR)/main.o: main.c stb_image.h stb_easy_font.h mac_file_dialog.h
+$(BUILD_DIR)/main.o: main.c app.h store.h views.h textedit.h stb_image.h stb_easy_font.h mac_file_dialog.h
 	@mkdir -p "$(BUILD_DIR)"
 	$(CC) $(CFLAGS) -c -o $@ main.c
+
+$(BUILD_DIR)/store.o: store.c app.h store.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ store.c
+
+$(BUILD_DIR)/views.o: views.c app.h views.h store.h textedit.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ views.c
+
+$(BUILD_DIR)/textedit.o: textedit.c app.h textedit.h
+	@mkdir -p "$(BUILD_DIR)"
+	$(CC) $(CFLAGS) -c -o $@ textedit.c
 
 .PHONY: clean all
 clean:

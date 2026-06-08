@@ -1,0 +1,26 @@
+sources/SDL/CMakeFiles/SDL3-shared.dir/src/render/software/SDL_render_sw.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_render_sw.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../SDL_sysrender.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_blit.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../SDL_yuv_sw_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_render_sw_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_draw.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_blendfillrect.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_blendline.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_blendpoint.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_drawline.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_drawpoint.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/SDL_triangle.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_pixels_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_rotate.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_vulkan.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_stdinc.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_error.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_video.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_close_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/render/software/../../video/SDL_surface_c.h

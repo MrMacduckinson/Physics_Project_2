@@ -1,0 +1,20 @@
+sources/SDL/CMakeFiles/SDL3-shared.dir/src/gpu/xr/SDL_openxrdyn.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/SDL_openxrdyn.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/SDL_openxrdyn.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/SDL_openxr_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/../../video/khronos/openxr/openxr.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/../../video/khronos/openxr/openxr_platform_defines.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/stddef.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/crtdefs.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/../../video/khronos/openxr/openxr_platform.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/../../video/khronos/openxr/openxr.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/gpu/xr/SDL_openxrsym.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_dlopennote.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_openxr.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_stdinc.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_gpu.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_close_code.h

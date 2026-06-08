@@ -1,0 +1,28 @@
+sources/SDL/CMakeFiles/SDL3-shared.dir/src/video/dummy/SDL_nullvideo.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/SDL_nullvideo.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_vulkan.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_stdinc.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_error.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_video.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_begin_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/include/SDL3/SDL_close_code.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../SDL_surface_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../SDL_blit.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../SDL_pixels_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_events_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/../video/SDL_sysvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_clipboardevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_displayevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_dropevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_keyboard_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_keymap_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_mouse_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_touch_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_pen_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/../SDL_internal.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/../../events/SDL_windowevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/SDL_nullvideo.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/SDL_nullevents_c.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/video/dummy/SDL_nullframebuffer_c.h

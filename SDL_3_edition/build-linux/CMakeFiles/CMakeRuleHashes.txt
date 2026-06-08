@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+8a26b9d0cd4f673016465f569d4a7432 CMakeFiles/mupdf_build
+9ef322703c970a000fddce19ea8b085e CMakeFiles/mupdf_build-complete
+e5ae1d855c1f30008802f916370ebcc9 mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-build
+1a327e45df4463ca2ecc833f0cfe017b mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-configure
+ad37201f47be0ed76f1ea75dd171c5a7 mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-download
+10303bdc5509f941f26a6426cd1b5f8c mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-install
+c0e25d276659c60448a46e289bfe503e mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-mkdir
+d63a49e1c1c8222cc2f060fd325d51df mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-patch
+889148ba5597fc6c1d1f9942c1fb6393 mupdf_build-prefix/src/mupdf_build-stamp/mupdf_build-update

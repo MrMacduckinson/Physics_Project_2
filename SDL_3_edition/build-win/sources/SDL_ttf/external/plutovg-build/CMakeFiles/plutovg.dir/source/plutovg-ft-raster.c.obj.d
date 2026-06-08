@@ -1,0 +1,23 @@
+sources/SDL_ttf/external/plutovg-build/CMakeFiles/plutovg.dir/source/plutovg-ft-raster.c.obj: \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/external/plutovg/source/plutovg-ft-raster.c \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/external/plutovg/source/plutovg-ft-raster.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/external/plutovg/source/plutovg-ft-types.h \
+ /Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL_ttf/external/plutovg/source/plutovg-ft-math.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/setjmp.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/crtdefs.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/corecrt.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/_mingw.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/vadefs.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/stddef.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/stdlib.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/limits.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/malloc.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
+ /opt/homebrew/Cellar/mingw-w64/14.0.0/toolchain-x86_64/x86_64-w64-mingw32/include/errno.h

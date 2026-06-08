@@ -1,0 +1,20 @@
+/src/build-linux/mupdf-out/thirdparty/gumbo-parser/src/utf8.o: \
+ thirdparty/gumbo-parser/src/utf8.c thirdparty/gumbo-parser/src/utf8.h \
+ thirdparty/gumbo-parser/src/gumbo.h \
+ thirdparty/gumbo-parser/src/tag_enum.h \
+ thirdparty/gumbo-parser/src/error.h \
+ thirdparty/gumbo-parser/src/insertion_mode.h \
+ thirdparty/gumbo-parser/src/string_buffer.h \
+ thirdparty/gumbo-parser/src/token_type.h \
+ thirdparty/gumbo-parser/src/parser.h thirdparty/gumbo-parser/src/util.h \
+ thirdparty/gumbo-parser/src/vector.h
+thirdparty/gumbo-parser/src/utf8.h:
+thirdparty/gumbo-parser/src/gumbo.h:
+thirdparty/gumbo-parser/src/tag_enum.h:
+thirdparty/gumbo-parser/src/error.h:
+thirdparty/gumbo-parser/src/insertion_mode.h:
+thirdparty/gumbo-parser/src/string_buffer.h:
+thirdparty/gumbo-parser/src/token_type.h:
+thirdparty/gumbo-parser/src/parser.h:
+thirdparty/gumbo-parser/src/util.h:
+thirdparty/gumbo-parser/src/vector.h:

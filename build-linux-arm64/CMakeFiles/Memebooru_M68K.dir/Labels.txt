@@ -1,0 +1,13 @@
+# Target labels
+ Memebooru_M68K
+# Source files and their labels
+/src/build-linux-arm64/CMakeFiles/Memebooru_M68K
+/src/build-linux-arm64/CMakeFiles/Memebooru_M68K.rule
+/src/build-linux-arm64/CMakeFiles/Memebooru_M68K-complete.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-build.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-configure.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-download.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-install.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-mkdir.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-patch.rule
+/src/build-linux-arm64/Memebooru_M68K-prefix/src/Memebooru_M68K-stamp/Memebooru_M68K-update.rule

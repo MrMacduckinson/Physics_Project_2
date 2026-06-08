@@ -1,0 +1,13 @@
+# Target labels
+ Memebooru_PPC
+# Source files and their labels
+/src/build-linux-arm64/CMakeFiles/Memebooru_PPC
+/src/build-linux-arm64/CMakeFiles/Memebooru_PPC.rule
+/src/build-linux-arm64/CMakeFiles/Memebooru_PPC-complete.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-build.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-configure.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-download.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-install.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-mkdir.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-patch.rule
+/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-update.rule

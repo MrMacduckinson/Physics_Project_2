@@ -1,0 +1,2 @@
+/opt/homebrew/bin/x86_64-w64-mingw32-ar qc libharfbuzz.a CMakeFiles/harfbuzz.dir/src/harfbuzz.cc.obj
+/opt/homebrew/bin/x86_64-w64-mingw32-ranlib libharfbuzz.a

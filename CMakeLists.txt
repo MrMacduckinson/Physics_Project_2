@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.16)
 option(BUILD_FOR_11_0 "Build for macOS 11.0+ (very modern SDK) (arm64) (sdl12-compat)" ON)
 option(BUILD_FOR_10_7 "Build for macOS 10.7+ (10.15 SDK) (x86_64) (sdl12-compat)" ON)
 option(BUILD_FOR_10_4 "Build for macOS 10.4-10.14 (10.4u SDK) (i386) (SDL 1.2)" ON)
-option(BUILD_FOR_PPC "Build for Mac OS 8.1-10.4 (Retro68 Macintosh Toolbox) (PowerPC) (modified SDL 1.2)" ON)
-option(BUILD_FOR_M68K "Build for Mac OS 8.1-??? (Retro68 Macintosh Toolbox) (m68k) (modified SDL 1.2)" ON)
+option(BUILD_FOR_PPC "Build for Mac OS 8.1-10.4 (Retro68 Macintosh Toolbox) (PowerPC) (modified SDL 1.2)" OFF)
+option(BUILD_FOR_M68K "Build for Mac OS 8.1-??? (Retro68 Macintosh Toolbox) (m68k) (modified SDL 1.2)" OFF)
 
 # If this is a multi-build invocation, delegate to ExternalProject
 if(NOT DEFINED IS_SUBBUILD)
@@ -143,7 +143,7 @@ if(BUILD_FOR_M68K OR BUILD_FOR_PPC)
     project(Memebooru NONE)
 
 elseif(BUILD_FOR_10_4)
-    set(MACOSX_10_4_SDK "/Library/Developer/CommandLineTools/SDKs/MacOSX10.4u.sdk")
+    set(MACOSX_10_4_SDK "/Library/Developer/CommandLineTools/SDKs/MacOSX10.4u.sdk" CACHE PATH "Sysroot for macOS 10.4u SDK")
     if(NOT EXISTS "${MACOSX_10_4_SDK}")
         message(FATAL_ERROR "MacOSX10.4u.sdk not found at ${MACOSX_10_4_SDK}")
     endif()
@@ -162,7 +162,7 @@ elseif(BUILD_FOR_10_4)
     endif()
 
 elseif(BUILD_FOR_10_7)
-    set(MACOSX_10_15_SDK "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk")
+    set(MACOSX_10_15_SDK "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk" CACHE PATH "Sysroot for macOS 10.15 SDK")
     if(NOT EXISTS "${MACOSX_10_15_SDK}")
         message(FATAL_ERROR "MacOSX10.15.sdk not found at ${MACOSX_10_15_SDK}")
     endif()
@@ -369,19 +369,23 @@ endif()
 
 # --- Main executable ---
 if(BUILD_FOR_10_4)
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c eprintf_stub.c)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE
+        main.c store.c views.c textedit.c eprintf_stub.c)
     set_source_files_properties(main.c PROPERTIES LANGUAGE OBJC)
     target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_10_4)
 elseif(BUILD_FOR_10_7)
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE
+        main.c store.c views.c textedit.c mac_file_dialog.c)
     set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
     target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_10_7)
 elseif(BUILD_FOR_11_0)
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE
+        main.c store.c views.c textedit.c mac_file_dialog.c)
     set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
     target_compile_definitions(${EXECUTABLE_NAME} PRIVATE BUILD_FOR_11_0)
 else()
-    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE main.c mac_file_dialog.c)
+    add_executable(${EXECUTABLE_NAME} MACOSX_BUNDLE
+        main.c store.c views.c textedit.c mac_file_dialog.c)
     set_source_files_properties(mac_file_dialog.c PROPERTIES LANGUAGE OBJC)
 endif()
 

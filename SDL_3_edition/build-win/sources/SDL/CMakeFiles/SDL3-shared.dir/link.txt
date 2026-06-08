@@ -1,0 +1,3 @@
+/opt/homebrew/bin/cmake -E rm -f CMakeFiles/SDL3-shared.dir/objects.a
+/opt/homebrew/bin/x86_64-w64-mingw32-ar qc CMakeFiles/SDL3-shared.dir/objects.a @CMakeFiles/SDL3-shared.dir/objects1.rsp
+/opt/homebrew/bin/x86_64-w64-mingw32-g++ -msse4.1 -O3 -DNDEBUG -shared -Wl,--version-script=/Users/mrmacduckinson/dev/Memebooru/SDL_3_edition/sources/SDL/src/dynapi/SDL_dynapi.sym -Wl,--no-undefined -static-libgcc -o SDL3.dll -Wl,--out-implib,libSDL3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles/SDL3-shared.dir/objects.a -Wl,--no-whole-archive @CMakeFiles/SDL3-shared.dir/linkLibs.rsp

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_PPC"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_PPC.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/CMakeFiles/Memebooru_PPC-complete.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-build.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-configure.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-download.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-install.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-mkdir.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-patch.rule"
+		},
+		{
+			"file" : "/src/build-linux-arm64/Memebooru_PPC-prefix/src/Memebooru_PPC-stamp/Memebooru_PPC-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Memebooru_PPC"
+		],
+		"name" : "Memebooru_PPC"
+	}
+}
